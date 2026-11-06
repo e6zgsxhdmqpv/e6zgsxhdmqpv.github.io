@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91桃色工厂-桃色工厂内容精选_热门榜单与精选合集</title>
+<meta name="description" content="91桃色工厂主题首页，聚合热门内容榜单、精选合集与品类导航，帮助访问者快速找到感兴趣的内容入口，并了解平台的内容组织方式。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d1f3c'/%3E%3Cpath d='M20 44c0-12 8-22 24-24-2 16-10 24-24 24z' fill='%23f6c9d5'/%3E%3Ccircle cx='44' cy='20' r='4' fill='%23ffd9a0'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#2a1420;
+  --ink-soft:#5a3a48;
+  --plum:#6d1f3c;
+  --plum-deep:#4a1229;
+  --rose:#c94f74;
+  --blush:#f8e6ec;
+  --cream:#fdf6f1;
+  --gold:#c99a4e;
+  --line:rgba(109,31,60,.14);
+  --radius:16px;
+  --shadow:0 10px 30px rgba(74,18,41,.10);
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{max-width:100%;display:block;}
+.wrap{width:min(1120px,92vw);margin:0 auto;}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,246,241,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand .mark{
+  width:38px;height:38px;border-radius:12px;
+  background:linear-gradient(140deg,var(--plum),var(--rose));
+  display:grid;place-items:center;flex:0 0 auto;
+  box-shadow:0 6px 14px rgba(109,31,60,.28);
+}
+.brand .mark svg{width:22px;height:22px;}
+.brand .name{
+  font-size:1.12rem;font-weight:800;letter-spacing:.04em;
+  color:var(--plum-deep);
+}
+.nav ul{
+  display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap;
+}
+.nav ul a{
+  display:inline-block;padding:7px 13px;border-radius:999px;
+  font-size:.92rem;color:var(--ink-soft);font-weight:600;
+  transition:.2s;
+}
+.nav ul a:hover,.nav ul a:focus-visible{background:var(--blush);color:var(--plum-deep);}
+.nav .cta{
+  padding:9px 20px;border-radius:999px;font-weight:700;font-size:.92rem;
+  background:var(--plum);color:#fff;box-shadow:0 6px 16px rgba(109,31,60,.25);
+  transition:.2s;
+}
+.nav .cta:hover{background:var(--plum-deep);}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  padding:56px 0 48px;
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(201,79,116,.18),transparent 65%),
+    radial-gradient(700px 380px at 8% 10%,rgba(201,154,78,.14),transparent 60%),
+    var(--cream);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.8rem;font-weight:700;letter-spacing:.16em;
+  color:var(--rose);text-transform:uppercase;
+  background:#fff;border:1px solid var(--line);
+  padding:6px 14px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose);}
+h1{
+  font-size:clamp(2rem,4.4vw,3.1rem);
+  line-height:1.22;margin:0 0 18px;
+  color:var(--plum-deep);font-weight:900;letter-spacing:.01em;
+}
+.hero p.lead{
+  font-size:1.02rem;color:var(--ink-soft);margin:0 0 26px;max-width:36em;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;border-radius:999px;font-weight:700;font-size:.95rem;
+  transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--plum);color:#fff;box-shadow:0 10px 24px rgba(109,31,60,.26);}
+.btn-primary:hover{background:var(--plum-deep);transform:translateY(-1px);}
+.btn-ghost{background:#fff;color:var(--plum-deep);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--rose);color:var(--rose);}
+.hero-stats{
+  display:flex;gap:26px;margin-top:32px;flex-wrap:wrap;
+}
+.hero-stats div{min-width:88px;}
+.hero-stats b{display:block;font-size:1.35rem;color:var(--plum);font-weight:900;}
+.hero-stats span{font-size:.82rem;color:var(--ink-soft);}
+.hero-art{
+  background:linear-gradient(160deg,#fff,var(--blush));
+  border:1px solid var(--line);border-radius:26px;
+  padding:22px;box-shadow:var(--shadow);
+}
+.hero-art svg{width:100%;height:auto;}
+
+/* 通用区块 */
+section{padding:56px 0;}
+.sec-head{margin-bottom:28px;max-width:44em;}
+.sec-head .tag{
+  font-size:.78rem;font-weight:800;letter-spacing:.18em;color:var(--gold);
+  text-transform:uppercase;display:block;margin-bottom:8px;
+}
+h2{
+  font-size:clamp(1.4rem,2.6vw,1.9rem);
+  margin:0 0 10px;color:var(--plum-deep);font-weight:800;line-height:1.3;
+}
+.sec-head p{margin:0;color:var(--ink-soft);font-size:.96rem;}
+
+/* 榜单 */
+.rank-band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.rank-list{display:grid;gap:12px;}
+.rank-item{
+  display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:center;
+  background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 18px;transition:.2s;
+}
+.rank-item:hover{border-color:var(--rose);transform:translateX(3px);}
+.rank-item .no{
+  font-weight:900;font-size:1.1rem;color:var(--rose);
+  text-align:center;font-variant-numeric:tabular-nums;
+}
+.rank-item h3{margin:0 0 2px;font-size:1rem;color:var(--ink);font-weight:700;}
+.rank-item p{margin:0;font-size:.85rem;color:var(--ink-soft);}
+.rank-item .heat{
+  font-size:.78rem;font-weight:700;color:var(--plum);
+  background:var(--blush);padding:4px 12px;border-radius:999px;white-space:nowrap;
+}
+
+/* 卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:0 4px 16px rgba(74,18,41,.05);
+  display:flex;flex-direction:column;gap:10px;transition:.22s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(201,79,116,.35);}
+.card .ico{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  background:var(--blush);color:var(--plum);
+}
+.card .ico svg{width:22px;height:22px;}
+.card h3{margin:0;font-size:1.05rem;color:var(--plum-deep);font-weight:800;}
+.card p{margin:0;font-size:.9rem;color:var(--ink-soft);}
+.card .link{
+  margin-top:auto;font-size:.86rem;font-weight:700;color:var(--rose);
+}
+
+/* 编辑精选 */
+.feature-band{background:linear-gradient(180deg,var(--blush),var(--cream));}
+.feature-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;}
+.feature-art{
+  background:#fff;border-radius:24px;border:1px solid var(--line);
+  padding:18px;box-shadow:var(--shadow);
+}
+.prose p{margin:0 0 14px;color:var(--ink-soft);font-size:.98rem;}
+.prose p strong{color:var(--plum-deep);}
+.checks{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px;}
+.checks li{
+  display:flex;gap:10px;align-items:flex-start;
+  font-size:.93rem;color:var(--ink-soft);
+}
+.checks li::before{
+  content:"";flex:0 0 auto;width:18px;height:18px;margin-top:3px;border-radius:50%;
+  background:var(--rose);
+  -webkit-mask:radial-gradient(circle at 50% 50%,transparent 0 3px,#000 3.5px) ;
+  background:var(--rose);
+  clip-path:polygon(38% 62%,18% 42%,8% 52%,38% 82%,92% 28%,82% 18%);
+}
+
+/* 筛选 */
+.toolbar{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:12px 16px;margin-bottom:22px;
+}
+.toolbar input{
+  flex:1 1 220px;min-width:0;border:1px solid var(--line);border-radius:999px;
+  padding:10px 18px;font-size:.92rem;font-family:inherit;color:var(--ink);
+  background:var(--cream);outline:none;transition:.2s;
+}
+.toolbar input:focus{border-color:var(--rose);background:#fff;box-shadow:0 0 0 3px rgba(201,79,116,.14);}
+.chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{
+  border:1px solid var(--line);background:var(--cream);color:var(--ink-soft);
+  border-radius:999px;padding:7px 16px;font-size:.85rem;font-weight:600;
+  cursor:pointer;font-family:inherit;transition:.2s;
+}
+.chip:hover{border-color:var(--rose);color:var(--rose);}
+.chip[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:#fff;}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.topic{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;transition:.2s;
+}
+.topic:hover{border-color:rgba(201,79,116,.4);}
+.topic h3{margin:0 0 6px;font-size:1rem;color:var(--plum-deep);font-weight:800;}
+.topic p{margin:0;font-size:.88rem;color:var(--ink-soft);}
+.empty{
+  display:none;padding:30px;text-align:center;color:var(--ink-soft);
+  background:#fff;border:1px dashed var(--line);border-radius:var(--radius);font-size:.92rem;
+}
+
+/* 下载卡 */
+.download-band{
+  background:var(--plum-deep);color:#fff;border-radius:0;
+}
+.download-band .wrap{
+  display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
+}
+.download-band h2{color:#fff;margin-bottom:6px;}
+.download-band p{margin:0;color:rgba(255,255,255,.74);font-size:.94rem;max-width:40em;}
+.btn-download{
+  background:#fff;color:var(--plum-deep);padding:13px 32px;border-radius:999px;
+  font-weight:800;font-size:.96rem;pointer-events:none;opacity:.85;
+  display:inline-flex;align-items:center;gap:8px;
+}
+
+/* 页尾 */
+footer.site{
+  background:#fff;border-top:1px solid var(--line);padding:38px 0 30px;
+  font-size:.88rem;color:var(--ink-soft);
+}
+.foot-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;}
+.foot-brand b{color:var(--plum-deep);font-size:1rem;display:block;margin-bottom:6px;}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap;}
+.foot-links a:hover{color:var(--rose);}
+.copy{
+  margin-top:22px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:.8rem;color:#8a6d78;
+}
+
+@media (max-width:900px){
+  .hero-grid,.feature-split{grid-template-columns:1fr;gap:30px;}
+  .cards{grid-template-columns:repeat(2,1fr);}
+  .hero-art{order:-1;}
+}
+@media (max-width:640px){
+  .nav{gap:10px;}
+  .nav ul{gap:2px;}
+  .nav ul a{padding:6px 10px;font-size:.86rem;}
+  .nav .cta{padding:8px 16px;font-size:.86rem;}
+  .hero{padding:36px 0 34px;}
+  section{padding:40px 0;}
+  .cards,.topic-grid{grid-template-columns:1fr;}
+  .rank-item{grid-template-columns:36px 1fr;gap:12px;}
+  .rank-item .heat{grid-column:2;justify-self:start;}
+  .download-band .wrap{flex-direction:column;align-items:flex-start;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="91桃色工厂 首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M7 18c0-6 4-11 12-12-1 8-5 12-12 12z" fill="#fff"/><circle cx="17" cy="6" r="1.6" fill="#ffd9a0"/></svg>
+      </span>
+      <span class="name">91桃色工厂</span>
+    </a>
+    <nav aria-label="主导航">
+      <ul>
+        <li><a href="#ranking">热门榜单</a></li>
+        <li><a href="#channels">内容品类</a></li>
+        <li><a href="#picks">编辑精选</a></li>
+        <li><a href="#explore">检索发现</a></li>
+        <li><a href="#download">下载</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#ranking">看今日榜单</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">主题首页</span>
+        <h1>91桃色工厂</h1>
+        <p class="lead">
+          91桃色工厂以榜单、品类与合集三条线索组织内容：先看当下热度，再按品类进入，
+          最后用检索找到具体条目。首页把入口集中在一处，减少来回翻找。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#ranking">查看热门榜单</a>
+          <a class="btn btn-ghost" href="#channels">浏览内容品类</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>6</b><span>内容品类</span></div>
+          <div><b>8</b><span>榜单条目</span></div>
+          <div><b>3</b><span>精选合集</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 300" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#c94f74"/><stop offset="1" stop-color="#6d1f3c"/>
+            </linearGradient>
+          </defs>
+          <rect x="14" y="14" width="392" height="272" rx="20" fill="#fff" stroke="#f0d9e1"/>
+          <rect x="38" y="42" width="150" height="12" rx="6" fill="url(#g1)" opacity=".85"/>
+          <rect x="38" y="66" width="96" height="9" rx="4.5" fill="#e8ccd6"/>
+          <rect x="38" y="96" width="170" height="70" rx="12" fill="#f8e6ec"/>
+          <rect x="38" y="180" width="170" height="70" rx="12" fill="#fdf1e6"/>
+          <rect x="224" y="96" width="158" height="154" rx="12" fill="#f8e6ec"/>
+          <circle cx="303" cy="150" r="26" fill="url(#g1)" opacity=".8"/>
+          <path d="M250 220c8-30 34-46 62-46s52 16 58 46" stroke="#c94f74" stroke-width="6" fill="none" stroke-linecap="round" opacity=".55"/>
+          <rect x="60" y="112" width="90" height="8" rx="4" fill="#e2b6c5"/>
+          <rect x="60" y="128" width="120" height="8" rx="4" fill="#eed3dc"/>
+          <rect x="60" y="196" width="80" height="8" rx="4" fill="#e8cfb4"/>
+          <rect x="60" y="212" width="108" height="8" rx="4" fill="#f3e2cd"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门榜单 -->
+  <section id="ranking" class="rank-band" aria-labelledby="rank-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Ranking</span>
+        <h2 id="rank-title">今日热门榜单</h2>
+        <p>榜单按首页展示顺序排列，供访问者判断先看哪一类内容。热度值以站内当日展示为准，仅反映当日排列位置。</p>
+      </div>
+      <div class="rank-list">
+        <a class="rank-item" href="#channels">
+          <span class="no">01</span>
+          <span><h3>今日综合热度</h3><p>跨品类合并展示，适合不知道从哪里开始时先看一眼。</p></span>
+          <span class="heat">榜单首位</span>
+        </a>
+        <a class="rank-item" href="#channels">
+          <span class="no">02</span>
+          <span><h3>新人常看合集</h3><p>由访问量较高的条目组成，按浏览顺序归拢。</p></span>
+          <span class="heat">稳定靠前</span>
+        </a>
+        <a class="rank-item" href="#channels">
+          <span class="no">03</span>
+          <span><h3>图集类精选</h3><p>以图片为主的条目，阅读节奏更轻。</p></span>
+          <span class="heat">图集</span>
+        </a>
+        <a class="rank-item" href="#channels">
+          <span class="no">04</span>
+          <span><h3>短篇速览</h3><p>篇幅较短，适合碎片时间快速浏览。</p></span>
+          <span class="heat">短篇</span>
+        </a>
+        <a class="rank-item" href="#channels">
+          <span class="no">05</span>
+          <span><h3>专题连载</h3><p>同一主题下的多篇内容，按发布顺序串联。</p></span>
+          <span class="heat">连载</span>
+        </a>
+        <a class="rank-item" href="#channels">
+          <span class="no">06</span>
+          <span><h3>编辑回看</h3><p>此前发布但仍被频繁打开的内容回顾位。</p></span>
+          <span class="heat">回看</span>
+        </a>
+        <a class="rank-item" href="#channels">
+          <span class="no">07</span>
+          <span><h3>风格标签榜</h3><p>按视觉风格归类，便于按偏好直接进入。</p></span>
+          <span class="heat">标签</span>
+        </a>
+        <a class="rank-item" href="#channels">
+          <span class="no">08</span>
+          <span><h3>本周新增</h3><p>本周内新加入的条目，按加入时间排列。</p></span>
+          <span class="heat">新增</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容品类 -->
+  <section id="channels" aria-labelledby="chan-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Channels</span>
+        <h2 id="chan-title">91桃色工厂内容品类</h2>
+        <p>品类是91桃色工厂的主要导航方式，每个品类对应一种阅读节奏和内容形态，进入后可按页内顺序继续浏览。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 15l4-4 4 4 3-3 4 4" stroke-linecap="round"/></svg></span>
+          <h3>图集精选</h3>
+          <p>以图片为主的条目，按主题分组，适合逐组浏览。每组附简短说明，帮助判断是否继续。</p>
+          <a class="link" href="#explore">进入图集 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5" stroke-linecap="round"/></svg></span>
+          <h3>短篇速览</h3>
+          <p>篇幅精简的阅读条目，适合在零散时间快速看完，首页保留最近更新的若干篇。</p>
+          <a class="link" href="#explore">进入速览 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V6l8-3 8 3v13" stroke-linecap="round"/><path d="M9 19v-6h6v6"/></svg></span>
+          <h3>专题连载</h3>
+          <p>围绕同一主题分篇发布，按顺序排列，适合从头读到尾，也方便回看遗漏的章节。</p>
+          <a class="link" href="#explore">进入专题 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></span>
+          <h3>风格标签</h3>
+          <p>以视觉与调性划分的标签集合，选择标签后页面会筛选出对应条目，便于按偏好查看。</p>
+          <a class="link" href="#explore">进入标签 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.6 5.6L21 9.4l-4.6 4.3L17.6 20 12 16.8 6.4 20l1.2-6.3L3 9.4l6.4-.8z" stroke-linejoin="round"/></svg></span>
+          <h3>编辑推荐</h3>
+          <p>由编辑挑选的条目，附一句推荐理由，说明它为什么被放在首页位置。</p>
+          <a class="link" href="#picks">进入推荐 →</a>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16M4 12h10M4 19h13" stroke-linecap="round"/></svg></span>
+          <h3>本周新增</h3>
+          <p>按加入时间排列的新条目，数量随更新变化，是回访时最直接的一栏。</p>
+          <a class="link" href="#explore">进入新增 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 编辑精选 -->
+  <section id="picks" class="feature-band" aria-labelledby="pick-title">
+    <div class="wrap feature-split">
+      <div class="feature-art" aria-hidden="true">
+        <svg viewBox="0 0 400 320" role="img">
+          <rect x="0" y="0" width="400" height="320" rx="18" fill="#fff"/>
+          <rect x="26" y="26" width="170" height="120" rx="12" fill="#f8e6ec"/>
+          <rect x="210" y="26" width="164" height="56" rx="12" fill="#fdf1e6"/>
+          <rect x="210" y="90" width="164" height="56" rx="12" fill="#f8e6ec"/>
+          <rect x="26" y="162" width="348" height="52" rx="12" fill="#fdf1e6"/>
+          <rect x="26" y="228" width="230" height="10" rx="5" fill="#e8ccd6"/>
+          <rect x="26" y="248" width="180" height="10" rx="5" fill="#f0dbe2"/>
+          <circle cx="111" cy="86" r="24" fill="#c94f74" opacity=".55"/>
+          <path d="M60 120l30-34 26 30 20-20 34 24" stroke="#6d1f3c" stroke-width="5" fill="none" stroke-linecap="round" opacity=".5"/>
+          <rect x="326" y="238" width="48" height="48" rx="14" fill="#6d1f3c"/>
+          <path d="M338 262l8 8 16-18" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="prose">
+        <span class="tag" style="font-size:.78rem;font-weight:800;letter-spacing:.18em;color:#c99a4e;">Editor's Picks</span>
+        <h2 id="pick-title">为什么这些内容被放在首页</h2>
+        <p>
+          91桃色工厂的首页位置有限，因此编辑精选只保留少量条目。判断依据有两条：
+          一是条目本身的信息完整度，二是它能否代表一个品类的基本样貌。
+        </p>
+        <p>
+          <strong>完整度</strong>指条目内的说明、图片与标签是否齐全，读者进入后不需要再猜；
+          <strong>代表性</strong>指它能否让第一次访问的人快速理解这一类内容大致是什么样。
+          两条都满足的条目，才会被放进精选区。
+        </p>
+        <ul class="checks">
+          <li>精选区条目数量较少，更新频率低于榜单区。</li>
+          <li>每条推荐附一句理由，说明推荐的具体依据。</li>
+          <li>精选不替代榜单，两者分别承担“看什么”和“先看什么”。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 检索发现 -->
+  <section id="explore" aria-labelledby="explore-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Explore</span>
+        <h2 id="explore-title">在91桃色工厂里检索条目</h2>
+        <p>输入名称或选择标签，下方条目会即时筛选。筛选在本地完成，不跳转页面，结果直接显示在当前位置。</p>
+      </div>
+
+      <div class="toolbar">
+        <input id="q" type="search" placeholder="输入条目名称，如：图集、专题、短篇" aria-label="检索条目名称">
+        <div class="chips" role="group" aria-label="按标签筛选">
+          <button class="chip" type="button" data-tag="全部" aria-pressed="true">全部</button>
+          <button class="chip" type="button" data-tag="图集" aria-pressed="false">图集</button>
+          <button class="chip" type="button" data-tag="短篇" aria-pressed="false">短篇</button>
+          <button class="chip" type="button" data-tag="专题" aria-pressed="false">专题</button>
+          <button class="chip" type="button" data-tag="标签" aria-pressed="false">标签</button>
+        </div>
+      </div>
+
+      <div class="topic-grid" id="topics">
+        <article class="topic" data-tag="图集" data-name="春日图集精选">
+          <h3>春日图集精选</h3>
+          <p>按主题成组排列的图片条目，每组开头有一句说明，方便连续翻看。</p>
+        </article>
+        <article class="topic" data-tag="短篇" data-name="三分钟短篇速览">
+          <h3>三分钟短篇速览</h3>
+          <p>篇幅控制在几分钟内读完，适合通勤或休息间隙打开。</p>
+        </article>
+        <article class="topic" data-tag="专题" data-name="城市夜色专题连载">
+          <h3>城市夜色专题连载</h3>
+          <p>同一主题分篇发布，按顺序阅读更连贯，也可单独查看某一篇。</p>
+        </article>
+        <article class="topic" data-tag="标签" data-name="柔和色调风格标签">
+          <h3>柔和色调风格标签</h3>
+          <p>以色彩与调性划分的标签集合，选中后列出对应的全部条目。</p>
+        </article>
+        <article class="topic" data-tag="图集" data-name="静物构图图集">
+          <h3>静物构图图集</h3>
+          <p>偏静态的构图类图集，节奏较慢，适合逐张浏览。</p>
+        </article>
+        <article class="topic" data-tag="短篇" data-name="周末短篇合辑">
+          <h3>周末短篇合辑</h3>
+          <p>周末集中更新的短篇集合，条目数量随更新调整。</p>
+        </article>
+      </div>
+      <p class="empty" id="empty">没有匹配的条目，换一个关键词或选择“全部”再试。</p>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download" class="download-band" aria-labelledby="dl-title">
+    <div class="wrap">
+      <div>
+        <h2 id="dl-title">91桃色工厂 下载</h2>
+        <p>下载入口用于获取首页说明与栏目结构文档，包含品类划分方式与榜单更新说明，方便离线查看。</p>
+      </div>
+      <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        下载
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>91桃色工厂</b>
+        <span>以榜单、品类与合集组织内容的主题首页。</span>
+      </div>
+      <div class="foot-links">
+        <a href="#ranking">热门榜单</a>
+        <a href="#channels">内容品类</a>
+        <a href="#picks">编辑精选</a>
+        <a href="#explore">检索发现</a>
+        <a href="#download">下载</a>
+      </div>
+    </div>
+    <div class="copy">
+      © 2024 91桃色工厂 · 页面内容为栏目说明与导航，具体条目以站内展示为准。
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('q');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var items = Array.prototype.slice.call(document.querySelectorAll('#topics .topic'));
+  var empty = document.getElementById('empty');
+  var activeTag = '全部';
+
+  function apply(){
+    var kw = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(el){
+      var tagOk = activeTag === '全部' || el.getAttribute('data-tag') === activeTag;
+      var text = (el.getAttribute('data-name') + ' ' + el.textContent).toLowerCase();
+      var kwOk = !kw || text.indexOf(kw) !== -1;
+      var ok = tagOk && kwOk;
+      el.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+
+  input.addEventListener('input', apply);
+  chips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      activeTag = btn.getAttribute('data-tag');
+      chips.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      apply();
+    });
+  });
+})();
+</script>
+</body>
+  </html>
