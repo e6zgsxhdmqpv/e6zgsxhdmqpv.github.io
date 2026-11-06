@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人人影视字幕组-字幕组作品归档_影视字幕资源分类</title>
+<meta name="description" content="人人影视字幕组主题首页，梳理字幕组作品归档方式、字幕文件类型、影视资源分类与常见使用问题，帮助访问者理解字幕组的历史内容与检索路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141a2b'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23f5c451' font-family='sans-serif'%3E影%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#141a2b;
+  --ink-2:#232c44;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --gold:#d9a531;
+  --gold-soft:#f3e3bd;
+  --line:#e2ddd2;
+  --text:#2b3140;
+  --muted:#6b7280;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+.wrap{width:min(1120px,92vw);margin:0 auto;}
+img,svg{display:block;max-width:100%;}
+
+/* ---------- header ---------- */
+header.site{
+  background:var(--ink);
+  color:#f2efe8;
+  position:sticky;top:0;z-index:50;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:14px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{
+  width:42px;height:42px;flex:none;border-radius:11px;
+  background:linear-gradient(140deg,#2b3category,#2b3550);
+  background:linear-gradient(140deg,#33405f,#1b2337);
+  display:grid;place-items:center;
+  border:1px solid rgba(245,196,81,.45);
+}
+.brand-name{
+  font-size:19px;font-weight:700;letter-spacing:.5px;color:#f7f3e9;
+}
+.brand-sub{font-size:11px;color:#9aa3b8;letter-spacing:2px;}
+nav.main ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap;}
+nav.main a{
+  display:block;padding:7px 13px;border-radius:8px;
+  font-size:14px;color:#cfd5e2;transition:.2s;
+}
+nav.main a:hover,nav.main a:focus-visible{background:rgba(245,196,81,.14);color:#f5c451;}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(circle at 82% 18%,rgba(217,165,49,.16),transparent 55%),
+    linear-gradient(180deg,#141a2b 0%,#1b2337 100%);
+  color:#eef0f5;
+  padding:56px 0 64px;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(245,196,81,.5),transparent);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .85fr;gap:48px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:2px;color:var(--gold);
+  border:1px solid rgba(245,196,81,.4);border-radius:999px;
+  padding:5px 14px;margin-bottom:20px;
+}
+h1{
+  font-size:clamp(28px,4.4vw,46px);
+  line-height:1.25;font-weight:800;letter-spacing:1px;
+  color:#fff;
+}
+.hero-lead{
+  margin-top:18px;font-size:15.5px;color:#c2c9d8;max-width:46em;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:10px;font-size:14.5px;font-weight:600;
+  transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--gold);color:#1a1405;}
+.btn-primary:hover{background:#e8b648;}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#e8ebf2;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.btn[data-download-placeholder]{
+  background:rgba(255,255,255,.08);color:#cfd5e2;
+  border-color:rgba(255,255,255,.18);
+  pointer-events:none;cursor:default;
+}
+.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+}
+.stat{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);padding:18px 16px;
+}
+.stat b{display:block;font-size:24px;color:var(--gold);font-weight:800;line-height:1.3;}
+.stat span{font-size:12.5px;color:#a7b0c4;}
+
+/* ---------- section shell ---------- */
+section{padding:56px 0;}
+.sec-head{margin-bottom:30px;max-width:52em;}
+.sec-kicker{
+  font-size:12.5px;letter-spacing:3px;color:var(--gold);
+  font-weight:700;margin-bottom:8px;
+}
+h2{
+  font-size:clamp(21px,2.6vw,28px);color:var(--ink);
+  font-weight:800;letter-spacing:.5px;line-height:1.35;
+}
+.sec-desc{margin-top:10px;color:var(--muted);font-size:14.5px;}
+
+/* ---------- archive cards ---------- */
+.cards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px 22px;
+  display:flex;flex-direction:column;gap:10px;
+  transition:.22s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 28px -18px rgba(20,26,43,.35);}
+.card-ico{
+  width:40px;height:40px;border-radius:10px;
+  background:var(--gold-soft);display:grid;place-items:center;
+}
+.card h3{font-size:16.5px;color:var(--ink);font-weight:700;}
+.card p{font-size:14px;color:#4b5468;}
+.card .tag{
+  font-size:11.5px;color:#8a6a1c;background:#faf1dc;
+  border-radius:6px;padding:2px 9px;align-self:flex-start;letter-spacing:.5px;
+}
+
+/* ---------- split block ---------- */
+.split{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start;
+}
+.prose p{font-size:15px;color:#3a4254;margin-bottom:14px;}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{color:var(--ink);}
+.panel{
+  background:var(--ink);color:#dfe4ee;border-radius:var(--radius);
+  padding:28px 26px;
+}
+.panel h3{font-size:16px;color:#fff;margin-bottom:16px;letter-spacing:.5px;}
+.panel ul{list-style:none;display:flex;flex-direction:column;gap:13px;}
+.panel li{font-size:13.8px;color:#b9c1d2;padding-left:20px;position:relative;}
+.panel li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:7px;height:7px;border-radius:2px;background:var(--gold);
+}
+.panel li b{color:#f0f2f7;font-weight:600;}
+
+/* ---------- list rows ---------- */
+.rows{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);}
+.row{
+  display:grid;grid-template-columns:150px 1fr;gap:24px;
+  padding:20px 0;border-bottom:1px solid var(--line);
+}
+.row .k{
+  font-size:13.5px;font-weight:700;color:var(--ink);
+  letter-spacing:.5px;
+}
+.row .k small{display:block;font-weight:400;color:var(--gold);font-size:11.5px;letter-spacing:1px;margin-top:3px;}
+.row p{font-size:14.3px;color:#48505f;}
+
+/* ---------- faq ---------- */
+.faq{display:flex;flex-direction:column;gap:12px;}
+details{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:16px 20px;
+}
+details[open]{border-color:var(--gold-soft);background:#fffdf7;}
+summary{
+  cursor:pointer;font-size:15px;font-weight:600;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{
+  content:"+";color:var(--gold);font-size:20px;font-weight:400;line-height:1;
+}
+details[open] summary::after{content:"–";}
+details p{font-size:14px;color:#4b5468;margin-top:10px;}
+
+/* ---------- footer ---------- */
+footer.site{
+  background:var(--ink);color:#9aa3b8;padding:40px 0 28px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.foot-grid{
+  display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.09);
+}
+.foot-brand{max-width:34em;}
+.foot-brand .name{font-size:16px;color:#f4efe4;font-weight:700;margin-bottom:8px;}
+.foot-brand p{font-size:13px;line-height:1.8;}
+.foot-links{display:flex;gap:44px;flex-wrap:wrap;}
+.foot-links h4{font-size:12.5px;color:#f5c451;letter-spacing:2px;margin-bottom:10px;font-weight:700;}
+.foot-links ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.foot-links a{font-size:13px;color:#a7b0c4;}
+.foot-links a:hover{color:#f5c451;}
+.copy{
+  padding-top:20px;font-size:12.5px;color:#7b849a;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:34px;}
+  .split{grid-template-columns:1fr;gap:30px;}
+  .row{grid-template-columns:1fr;gap:6px;}
+  .hero{padding:40px 0 46px;}
+  section{padding:42px 0;}
+}
+@media (max-width:560px){
+  .header-inner{justify-content:center;}
+  nav.main ul{justify-content:center;}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:10px;}
+  .stat b{font-size:20px;}
+  .foot-links{gap:28px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="人人影视字幕组 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.5" y="5" width="19" height="13" rx="2.5" stroke="#f5c451" stroke-width="1.6"/>
+          <path d="M6 9.5h5M6 12.5h8" stroke="#f5c451" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M15.5 14.5l3-2-3-2v4z" fill="#f5c451"/>
+        </svg>
+      </span>
+      <span>
+        <span class="brand-name">人人影视字幕组</span>
+        <span class="brand-sub">SUBTITLE ARCHIVE</span>
+      </span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <ul>
+        <li><a href="#archive">作品归档</a></li>
+        <li><a href="#types">字幕类型</a></li>
+        <li><a href="#guide">使用路径</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">字幕作品 · 分类归档</span>
+        <h1>人人影视字幕组</h1>
+        <p class="hero-lead">
+          这里以人人影视字幕组的历史作品为线索，把字幕文件、影视条目与语言版本按可检索的方式归类。
+          无论你是想找回某部剧的双语字幕，还是想弄清字幕文件的格式差别，都可以从下面的归档入口开始。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#archive">进入作品归档</a>
+          <a class="btn btn-ghost" href="#types">了解字幕类型</a>
+          <a class="btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+      </div>
+      <div class="hero-stats" aria-label="归档概览">
+        <div class="stat"><b>双语</b><span>中英对照字幕为主</span></div>
+        <div class="stat"><b>SRT / ASS</b><span>常见字幕文件格式</span></div>
+        <div class="stat"><b>剧集 / 电影</b><span>按条目分卷整理</span></div>
+        <div class="stat"><b>多版本</b><span>同一作品的不同译制</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <section id="archive">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">ARCHIVE</div>
+        <h2>作品归档的四种入口</h2>
+        <p class="sec-desc">人人影视字幕组的作品数量庞大，按作品形态与语言版本拆分归档，比逐条翻找更容易定位到需要的字幕。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="card-ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#8a6a1c" stroke-width="1.7"/><path d="M7 10h4M7 13h7" stroke="#8a6a1c" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </span>
+          <span class="tag">剧集</span>
+          <h3>按季与集归档</h3>
+          <p>美剧、英剧等长剧集通常按季打包，字幕文件与集数一一对应，文件名中保留季号与集号，便于整季匹配。</p>
+        </article>
+        <article class="card">
+          <span class="card-ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v14H4z" stroke="#8a6a1c" stroke-width="1.7"/><path d="M4 9h16M9 9v10" stroke="#8a6a1c" stroke-width="1.7"/></svg>
+          </span>
+          <span class="tag">电影</span>
+          <h3>按片名单条归档</h3>
+          <p>电影条目以片名加年份区分，同名影片的不同版本会额外标注剪辑版或修复版，避免字幕与画面时长错位。</p>
+        </article>
+        <article class="card">
+          <span class="card-ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#8a6a1c" stroke-width="1.7"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17" stroke="#8a6a1c" stroke-width="1.7"/></svg>
+          </span>
+          <span class="tag">语种</span>
+          <h3>按语言版本归档</h3>
+          <p>同一部作品可能存在简体、繁体与纯英文字幕，人人影视字幕组以中英双语版本流传最广，归档时按语言分别标注。</p>
+        </article>
+        <article class="card">
+          <span class="card-ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 8l7-5 7 5" stroke="#8a6a1c" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="tag">格式</span>
+          <h3>按文件格式归档</h3>
+          <p>SRT 适合通用播放器，ASS 支持样式与特效字幕。归档说明会标明格式，方便按播放环境选择对应文件。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPES -->
+  <section id="types" style="background:#fbf9f4;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap split">
+      <div class="prose">
+        <div class="sec-kicker">SUBTITLE FILES</div>
+        <h2>字幕文件与版本差异</h2>
+        <p style="margin-top:14px;">
+          人人影视字幕组留下的字幕文件，大多以纯文本字幕和内嵌样式字幕两类形式存在。
+          纯文本字幕只包含时间轴与对白，体积小、兼容性好；带样式的字幕则额外记录字体、位置与颜色，
+          在支持特效的播放器中能还原片头字幕的排版效果。
+        </p>
+        <p>
+          版本差异主要来自时间轴。同一部影片的蓝光版、网络版与加长版时长不同，
+          若直接套用另一版本的字幕，就会出现提前或延后。归档时保留版本标注，
+          正是为了让使用者先核对片源，再决定是否需要微调时间轴。
+        </p>
+        <p>
+          此外，人人影视字幕组的双语字幕通常把中文与英文分两行排列，
+          部分条目会提供可切换的单语版本。选择时可以先确认播放器是否支持双字幕轨，
+          再决定使用合并版还是分离版文件。
+        </p>
+      </div>
+      <aside class="panel">
+        <h3>选择字幕前先确认三件事</h3>
+        <ul>
+          <li><b>片源版本</b>：蓝光、WEB 与加长版时长不同，时间轴需对应。</li>
+          <li><b>文件格式</b>：SRT 通用性强，ASS 保留样式与特效。</li>
+          <li><b>语言组合</b>：中英双语、简体单语或纯英文字幕按需取用。</li>
+          <li><b>编码方式</b>：UTF-8 更稳妥，避免中文显示为乱码。</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">WORKFLOW</div>
+        <h2>从检索到使用的完整路径</h2>
+        <p class="sec-desc">把一次字幕查找拆成四步，每一步都有明确的判断依据，减少反复试错。</p>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <div class="k">第一步<small>确定作品</small></div>
+          <p>先写清作品名、年份与季集信息。人人影视字幕组的条目通常以英文原名加中文译名并列，检索时用原名命中率更高，译名则便于确认是否为同一部作品。</p>
+        </div>
+        <div class="row">
+          <div class="k">第二步<small>核对版本</small></div>
+          <p>查看条目说明中的片源版本与时长。若手中片源是网络版，却取用了蓝光版字幕，需要预留几分钟做整体平移，而不是逐句修改。</p>
+        </div>
+        <div class="row">
+          <div class="k">第三步<small>选择格式</small></div>
+          <p>普通播放器选 SRT 即可；希望保留片头排版与注释样式，则选 ASS。两种文件的对白内容一致，差别在于呈现方式与兼容范围。</p>
+        </div>
+        <div class="row">
+          <div class="k">第四步<small>载入校验</small></div>
+          <p>载入后抽查开头、中段与结尾三处时间点，确认字幕与画面同步。若出现乱码，优先检查文件编码是否为 UTF-8。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:#fbf9f4;border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">FAQ</div>
+        <h2>关于人人影视字幕组的常见问题</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>人人影视字幕组的字幕主要覆盖哪些类型？</summary>
+          <p>以海外剧集与电影为主，涵盖美剧、英剧及部分纪录片和动画。归档按剧集、电影、语种与格式四类入口组织，方便按作品形态定位。</p>
+        </details>
+        <details>
+          <summary>双语字幕和单语字幕有什么区别？</summary>
+          <p>双语字幕在同一画面内并列中文与英文，适合对照学习；单语字幕只保留一种语言，阅读负担更小。两者对白内容一致，可按观看习惯选择。</p>
+        </details>
+        <details>
+          <summary>为什么字幕会出现不同步？</summary>
+          <p>多数情况是片源版本不一致导致时长差异。先确认字幕标注的版本，再对整体时间轴做统一偏移，通常比逐句调整更有效。</p>
+        </details>
+        <details>
+          <summary>字幕文件打不开或显示乱码怎么办？</summary>
+          <p>先检查文件扩展名是否为 .srt 或 .ass，再用文本编辑器确认编码。中文乱码多因编码不是 UTF-8，转换编码后重新载入即可。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">人人影视字幕组</div>
+        <p>以字幕作品归档为主题的资料页，围绕人人影视字幕组的作品分类、字幕格式与使用路径展开，帮助访问者理解字幕文件的组织方式与选择依据。</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>内容</h4>
+          <ul>
+            <li><a href="#archive">作品归档</a></li>
+            <li><a href="#types">字幕类型</a></li>
+            <li><a href="#guide">使用路径</a></li>
+            <li><a href="#faq">常见问题</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>说明</h4>
+          <ul>
+            <li><a href="#top">返回顶部</a></li>
+            <li><a href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>人人影视字幕组 · 字幕作品归档主题页</span>
+      <span>内容仅作资料梳理，字幕版权归原权利人所有</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
